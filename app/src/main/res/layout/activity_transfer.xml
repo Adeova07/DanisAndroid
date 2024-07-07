@@ -1,0 +1,186 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background2"
+    android:layout_height="match_parent"
+    tools:context=".TransferActivity">
+
+
+    <ImageButton
+        android:id="@+id/btnClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:src="@drawable/close"
+        android:contentDescription="Tutup" />
+
+
+    <!-- CardView untuk tombol Pengeluaran dan Pendapatan -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_kategori"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="8dp"
+        android:layout_below="@+id/btnClose"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <!-- Tombol untuk Pendapatan -->
+            <Button
+                android:id="@+id/transaksiID"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Transaksi"
+                android:textStyle="bold"
+                android:backgroundTint="@color/menu_icon_color"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- TextView untuk Tanggal -->
+    <TextView
+        android:id="@+id/tv_tanggal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tanggal"
+        android:textSize="18sp"
+        android:layout_below="@id/cardview_kategori"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"/>
+
+    <!-- TextInputEditText untuk Tanggal -->
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/tanggalID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_tanggal"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Tanggal"
+        android:inputType="date"
+        android:minHeight="48dp" />
+
+    <!-- TextView untuk Jam -->
+    <TextView
+        android:id="@+id/tv_jam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jam"
+        android:textSize="18sp"
+        android:layout_below="@id/tanggalID"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"/>
+
+    <!-- TextInputEditText untuk Jam -->
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/jamID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_jam"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Jam"
+        android:inputType="time"
+        android:minHeight="48dp" />
+
+    <!-- TextView untuk Jumlah -->
+    <TextView
+        android:id="@+id/tv_jumlah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jumlah"
+        android:textSize="18sp"
+        android:layout_below="@id/jamID"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"/>
+
+    <!-- TextInputEditText untuk Jumlah -->
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/jumlahID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_jumlah"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Rp 0"
+        android:inputType="number"
+        android:minHeight="48dp" />
+
+
+    <!-- TextView untuk Kategori -->
+    <TextView
+        android:id="@+id/kategoriID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dari"
+        android:textSize="18sp"
+        android:layout_below="@id/jumlahID"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"/>
+
+    <!-- Spinner untuk memilih kategori -->
+    <Spinner
+        android:id="@+id/kategori1_Id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/kategoriID"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:minHeight="48dp" />
+
+    <!-- TextView untuk Kategori -->
+    <TextView
+        android:id="@+id/Kategori2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kepada"
+        android:textSize="18sp"
+        android:layout_below="@id/kategori1_Id"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"/>
+
+    <!-- Spinner untuk memilih kategori dompet -->
+    <Spinner
+        android:id="@+id/kategori2_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Kategori2"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:minHeight="48dp" />
+
+
+    <Button
+        android:id="@+id/SimpanPendapatan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Simpan"
+        android:background="@color/menu_icon_color"
+        android:layout_below="@id/kategori2_id"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>
+
+

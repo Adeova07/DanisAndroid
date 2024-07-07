@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">BackEndDannis</string>
+    <string name="user_name">Nama Pengguna</string>
+    <string name="saldo">Saldo :</string>
+    <string name="balance">0</string>
+    <string name="money_icon_description">Deskripsi untuk ikon uang</string>
+    <string name="menu_1_description">Deskripsi untuk Menu 1</string>
+    <string name="menu_1_text">Transaksi</string>
+    <string name="menu_2_description">Deskripsi untuk Menu 2</string>
+    <string name="menu_2_text">Statistik</string>
+    <string name="menu_3_description">Deskripsi untuk Menu 3</string>
+    <string name="menu_3_text">Dompet</string>
+    <string name="add_item_description">Tambahkan item baru</string>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="menu_icon_color">#55E092</color>
+    <color name="redFlag">#CC1818</color>
+    <color name="menu_text_color">#55E092</color>
+    <color name="addItem">#B3B3B3</color>
+
+
+</resources>

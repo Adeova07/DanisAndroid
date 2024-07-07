@@ -1,0 +1,218 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context=".transaction_pendapatan_activity">
+
+    <ImageButton
+        android:id="@+id/btnClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:src="@drawable/close"
+        android:contentDescription="Tutup" />
+
+    <!-- CardView untuk tombol Pengeluaran dan Pendapatan -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_kategori"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="8dp"
+        android:layout_below="@+id/btnClose"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <!-- Tombol untuk Pengeluaran -->
+            <Button
+                android:id="@+id/btn_pengeluaran"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pengeluaran"
+                android:textSize="16sp" />
+
+            <!-- Spasi antara tombol -->
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="match_parent" />
+
+            <!-- Tombol untuk Pendapatan -->
+            <Button
+                android:id="@+id/btn_pendapatan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pendapatan"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- TextView untuk Tanggal -->
+    <TextView
+        android:id="@+id/tv_tanggal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tanggal"
+        android:textSize="18sp"
+        android:layout_below="@id/cardview_kategori"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp" />
+
+    <!-- TextInputEditText untuk Tanggal -->
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/tanggalID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_tanggal"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Tanggal"
+        android:inputType="date"
+        android:focusable="false"
+        android:minHeight="48dp" />
+
+    <!-- TextView untuk Jam -->
+    <TextView
+        android:id="@+id/tv_jam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jam"
+        android:textSize="18sp"
+        android:layout_below="@id/tanggalID"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp" />
+
+    <!-- TextInputEditText untuk Jam -->
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/jamID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_jam"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Jam"
+        android:inputType="time"
+        android:focusable="false"
+        android:minHeight="48dp" />
+
+    <!-- TextView untuk Jumlah -->
+    <TextView
+        android:id="@+id/tv_jumlah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jumlah"
+        android:textSize="18sp"
+        android:layout_below="@id/jamID"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/jumlahID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_jumlah"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Rp 0"
+        android:inputType="number"
+        android:minHeight="48dp" />
+
+    <!-- TextView untuk Deskripsi -->
+    <TextView
+        android:id="@+id/tv_deskripsi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deskripsi"
+        android:textSize="18sp"
+        android:layout_below="@id/jumlahID"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp" />
+
+    <!-- TextInputEditText untuk Deskripsi -->
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/deskripsiID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_deskripsi"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Deskripsi"
+        android:minHeight="48dp" />
+
+    <!-- TextView untuk Kategori -->
+    <TextView
+        android:id="@+id/tv_kategori"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kategori"
+        android:textSize="18sp"
+        android:layout_below="@id/deskripsiID"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp" />
+
+    <!-- Spinner untuk memilih kategori -->
+    <Spinner
+        android:id="@+id/kategoriID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_kategori"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:minHeight="48dp" />
+
+    <!-- TextView untuk Kategori -->
+    <TextView
+        android:id="@+id/DompetPos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dari"
+        android:textSize="18sp"
+        android:layout_below="@id/kategoriID"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp" />
+
+    <!-- Spinner untuk memilih kategori dompet -->
+    <Spinner
+        android:id="@+id/dompetID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/DompetPos"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:minHeight="32dp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/SimpanPendapatan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dompetID"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@color/menu_icon_color"
+        android:minHeight="40dp"
+        android:text="Simpan"
+        tools:ignore="TouchTargetSizeCheck" />
+</RelativeLayout>

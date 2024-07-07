@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/iconmanager"
+        android:label="D Wallet Manager"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="31">
+        <activity
+            android:name=".DetailSaldo"
+            android:exported="false" />
+        <activity
+            android:name=".TransferActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TambahContentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WalletMActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LinePengeluaranActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RinciStatsPendapatanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RinciStasPengeluaranActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RingkasanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StatistikActivity"
+            android:exported="false" /> <!-- Entry for UtamaActivity -->
+        <activity
+            android:name=".UtamaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".transaction_pendapatan_activity"
+            android:exported="false" />
+        <activity
+            android:name=".transaction_pengeluaran_activity"
+            android:exported="false" /> <!-- Entry for MainActivity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".NotificationService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
